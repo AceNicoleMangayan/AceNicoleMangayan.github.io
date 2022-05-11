@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet">
+<style>
+.collapsible {
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 30px;
+}
+
+.active, .collapsible:hover {
+  background-color: teal;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.nav{
+	background-color: teal;
+	list-style-type: none;
+}
+
+.nav li{
+	display: inline-block;
+	font-size: 20px;
+	padding: 20px;
+}
+
+.nav li a{
+	text-decoration: none;
+	color:white
+}
+</style>
+</head>
+<body>
+<h1>Welcome Back!</h1>
+<button type="button" class="collapsible">☰	  Hi, Ace Nicole Mangayan, Click Here!</button>
+<ul class="nav">
+		<li><a href="#about">About</a></li>
+		<li><a href="#education">Education</a></li>
+		<li><a href="#skills">Skills</a></li>
+		<li><a href="#portfolio">Portfolio</a></li>
+		<li><a href="#contact">Contact</a></li>
+	</ul>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var nav = this.nextElementSibling;
+    if (nav.style.display === "block") {
+      nav.style.display = "none";
+    } else {
+      nav.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
+</html>
